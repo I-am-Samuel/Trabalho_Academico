@@ -1,0 +1,11 @@
+# Arquivos java
+*.class
+*.jar
+*.war
+*.ear
+src/module-info.java
+
+# Eclipse
+.project
+.classpath
+.settings/
