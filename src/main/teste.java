@@ -1,10 +1,9 @@
 package main;
 
 import java.util.Random;
-
 import gerenciador.Secao;
 
-public class teste {
+public class Teste {
     public static void main(String[] args) {
         Random random = new Random();
 
