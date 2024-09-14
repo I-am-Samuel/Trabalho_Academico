@@ -48,4 +48,32 @@ public class Cinema {
             System.out.println("Seção cadastrada com sucesso!\n");
         }
     }
+     private static void vender() {
+        
+        if (secoes.isEmpty()) {
+            System.out.println("Nenhuma seção cadastrada para venda.");
+            return;
+        }
+    
+        
+        System.out.println("Seções disponíveis:");
+        for (int i = 0; i < secoes.size(); i++) {
+            Secao secao = secoes.get(i);
+            System.out.println((i + 1) + ". " + secao.getNomeFilme() + " - Horário: " + secao.getHorario());
+        }
+    
+        
+        System.out.print("Escolha uma seção pelo número: ");
+        int escolha = scanner.nextInt();
+        
+    
+        Secao secaoEscolhida = secoes.get(escolha - 1);
+    
+        
+        System.out.println("Você escolheu a seção: " + secaoEscolhida.getNomeFilme() +
+                           " no horário " + secaoEscolhida.getHorario() + ". Venda confirmada!");
+        
+       
+    }   
+
 }
