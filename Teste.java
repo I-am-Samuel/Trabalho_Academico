@@ -1,7 +1,6 @@
-package main;
 
 import java.util.Random;
-import Secao;
+
 
 public class Teste {
     public static void main(String[] args) {

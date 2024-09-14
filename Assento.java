@@ -1,5 +1,3 @@
-package gerenciador;
-
 public class Assento {
 
     private boolean[][] disponivel;

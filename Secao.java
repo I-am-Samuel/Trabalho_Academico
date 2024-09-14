@@ -1,4 +1,4 @@
-import Assento;
+
 
 public class Secao {
     /*
