@@ -1,8 +1,5 @@
 package gerenciador;
 
-import gerenciador.Assento;
-
-
 public class Secao {
     /*
     * b) Classe Seção que tem os seguintes atributos:
@@ -14,7 +11,7 @@ public class Secao {
     */
 
     private String nomeFilme;
-    private String[] horario = new String[2];
+    private String[] vetHorario = new String[2];
     private Double preco = 50.0;
     private Assento assentos;
     private String situacao;
@@ -22,7 +19,7 @@ public class Secao {
 
     public Secao(String nomeFilme, String horario) {
         this.nomeFilme = nomeFilme;
-        this.horario = horario.split(":");
+        this.vetHorario = horario.split(":");
         this.assentos = new Assento();
         this.situacao = assentos.getContAssentosVazios() > 0? "Disponível": "Lotada";
     }
@@ -52,11 +49,14 @@ public class Secao {
 
     
     // Horario 
-    public void setHorario(String horario) {
-        this.horario = horario.split(":"); // entrada= 18:00
+    public void setVetHorario(String horario) {
+        this.vetHorario = horario.split(":"); // entrada= 18:00
     }
-    public String[] getHorario() {
-        return this.horario;
+    public String[] getVetHorario() {
+        return this.vetHorario;
+    }
+    public String getFormatHorario() {
+        return this.vetHorario[0] + ":" + this.vetHorario[1];
     }
 
 
@@ -88,7 +88,7 @@ public class Secao {
     public String toString() {
         return "Seção {"
             + "\n" + "  NomeFilme: " + this.nomeFilme
-            + "\n" + "  Horario: " + this.horario[0] + "h" + this.horario[1] + "min" 
+            + "\n" + "  Horario: " + this.vetHorario[0] + "h" + this.vetHorario[1] + "min" 
             + "\n" + "  Preco: R$" + this.preco
             + "\n" + "  Situacao: " + this.situacao 
             + "\n" + "}";
