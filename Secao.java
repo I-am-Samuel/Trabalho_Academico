@@ -53,10 +53,10 @@ public class Secao {
         this.vetHorario = horario.split(":"); // entrada= 18:00
     }
     public String[] getVetHorario() {
-        return this.horario;
+        return this.vetHorario;
     }
     public String getFormatHorario() {
-        return this.horario[0] + ":" + this.horario[1];
+        return this.vetHorario[0] + ":" + this.vetHorario[1];
     }
 
 
