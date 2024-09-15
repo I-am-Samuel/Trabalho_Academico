@@ -5,14 +5,14 @@ public class Assento {
 
 
     /*Construtor da Class */
-    public Assento() {
+    public Assento(boolean assentosDisponiveis) {
         this.disponivel = new boolean[5][4];
         this.contAssentosVazios = 20;
 
         /*Aqui vai andar a matriz e iniciar tudo true (tudo disponivel) */
-        for(int i = 0; i < disponivel.length; i++){
-            for(int j = 0; j < disponivel[i].length; j++){
-                this.disponivel[i][j] = true;
+        for(int i = 0; i < this.disponivel.length; i++){
+            for(int j = 0; j < this.disponivel[i].length; j++){
+                this.disponivel[i][j] = assentosDisponiveis;
             }
         }
     }

@@ -1,5 +1,3 @@
-
-
 public class Secao {
     /*
     * b) Classe Seção que tem os seguintes atributos:
@@ -17,10 +15,10 @@ public class Secao {
     private String situacao;
 
 
-    public Secao(String nomeFilme, String horario) {
+    public Secao(String nomeFilme, String horario, boolean assentosDisponiveis) {
         this.nomeFilme = nomeFilme;
         this.vetHorario = horario.split(":");
-        this.assentos = new Assento();
+        this.assentos = new Assento(assentosDisponiveis);
         this.situacao = assentos.getContAssentosVazios() > 0? "Disponível": "Lotada";
     }
 
