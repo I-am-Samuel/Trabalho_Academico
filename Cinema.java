@@ -59,7 +59,7 @@ public class Cinema {
         System.out.println("Seções disponíveis:");
         for (int i = 0; i < secoes.size(); i++) {
             Secao secao = secoes.get(i);
-            System.out.println((i + 1) + ". " + secao.getNomeFilme() + " - Horário: " + secao.getHorario());
+            System.out.println((i + 1) + ". " + secao.getNomeFilme() + " - Horário: " + secao.getFormatHorario());
         }
     
         
@@ -71,7 +71,7 @@ public class Cinema {
     
         
         System.out.println("Você escolheu a seção: " + secaoEscolhida.getNomeFilme() +
-                           " no horário " + secaoEscolhida.getHorario() + ". Venda confirmada!");
+                           " no horário " + secaoEscolhida.getFormatHorario() + ". Venda confirmada!");
         
        
     }   
